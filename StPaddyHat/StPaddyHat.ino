@@ -36,6 +36,8 @@ void setup() {
   // End of trinket special code
 
   pixels.begin(); // This initializes the NeoPixel library.
+  pixels.setBrightness(25);
+  
   randomSeed(analogRead(0));
   allOff();
 }
@@ -252,9 +254,12 @@ void show_flag_bar()
 void loop() {
   show_fireworks();
   delay(1000);
+  show_fireworks();
+  delay(1000);
+
   show_flag_bar();
   allOff();
-  delay(20000);
+  delay(15000);
   
   //show_smile();
   //show_cursor();
